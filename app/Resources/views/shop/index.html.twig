@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Steam Games Shop
+{% endblock %}
+
+{% block javascripts %}
+	{% javascripts output='js/sc.js'
+		'@jquery_js' 
+		'@jqgrid_js'
+		'@shop_js' %}
+        <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
+
+{% block stylesheets %}
+	{% stylesheets output='css/st.css'
+		'@jquery_css'
+		'@jqgrid_css' %}
+		<link rel="stylesheet" href="{{ asset_url }}" />
+	{% endstylesheets %}
+{% endblock %}
+
+{% block body %}
+	<table id="grid"></table>
+	<div id="gridpager"></div>
+{% endblock %}

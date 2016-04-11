@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Login...
+{% endblock %}
+
+{% block stylesheets %}
+	{% stylesheets 
+		'@login_less' %}
+		<link rel="stylesheet" href="{{ asset_url }}" />
+	{% endstylesheets %}
+{% endblock %}
+
+{% form_theme form _self %}
+
+{% block body %}
+	<div class="center">
+		{{ form_start(form) }}
+		{{ form_widget(form) }}
+		{{ form_end(form) }}
+	</div>
+{% endblock %}

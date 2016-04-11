@@ -1,0 +1,333 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Lo",
+				"LoginForm〔namespace〕"
+			],
+			[
+				"bloc",
+				"block.	block (block)"
+			],
+			[
+				"get",
+				"getJSON〔function〕"
+			],
+			[
+				"JSON",
+				"JSON_UNESCAPED_UNICODE〔constant〕"
+			],
+			[
+				"S",
+				"Symfony〔namespace〕"
+			],
+			[
+				"J",
+				"JsonEncoder〔class〕"
+			],
+			[
+				"Se",
+				"Serializer〔namespace〕"
+			],
+			[
+				"json",
+				"json_encode〔function〕"
+			],
+			[
+				"jso",
+				"json_encode〔function〕"
+			],
+			[
+				"strrep",
+				"str_replace〔function〕"
+			],
+			[
+				"re",
+				"ret1	return true"
+			],
+			[
+				"var",
+				"var_dump〔function〕"
+			],
+			[
+				"file",
+				"file_put_contents〔function〕"
+			],
+			[
+				"header",
+				"header_image"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"fileg",
+				"file_get_contents〔function〕"
+			],
+			[
+				"pri",
+				"private〔keyword〕"
+			],
+			[
+				"in",
+				"inputs"
+			],
+			[
+				"blo",
+				"block.	block (block)"
+			],
+			[
+				"bl",
+				"block.	block (block)"
+			],
+			[
+				"di",
+				"div	Tag"
+			],
+			[
+				"jq",
+				"jqgrid"
+			],
+			[
+				"js",
+				"jsquery"
+			],
+			[
+				"App",
+				"AppBundle"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 150.0,
+		"last_filter": "Package Control: ins",
+		"selected_items":
+		[
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: i",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 424.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Git/symfonyproject/lockyproj/app",
+		"/C/Git/symfonyproject/lockyproj/app/Resources",
+		"/C/Git/symfonyproject/lockyproj/app/Resources/views",
+		"/C/Git/symfonyproject/lockyproj/app/Resources/views/default",
+		"/C/Git/symfonyproject/lockyproj/app/Resources/views/shop",
+		"/C/Git/symfonyproject/lockyproj/src",
+		"/C/Git/symfonyproject/lockyproj/src/AppBundle",
+		"/C/Git/symfonyproject/lockyproj/src/AppBundle/Controller",
+		"/C/Git/symfonyproject/lockyproj/src/AppBundle/Entity",
+		"/C/Git/symfonyproject/lockyproj/src/AppBundle/Resources",
+		"/C/Git/symfonyproject/lockyproj/src/AppBundle/Resources/public",
+		"/C/Git/symfonyproject/lockyproj/src/AppBundle/Resources/public/js",
+		"/C/Git/symfonyproject/lockyproj/src/AppBundle/Resources/public/js/shop",
+		"/C/Git/symfonyproject/lockyproj/web",
+		"/C/Git/symfonyproject/lockyproj/web/bundles"
+	],
+	"file_history":
+	[
+		"/C/echo.bat",
+		"/C/Git/symfonyproject/lockyproj/app/config/config.yml",
+		"/C/Git/symfonyproject/lockyproj/src/AppBundle/Resources/public/js/shop/loadData.js",
+		"/C/Git/jsshop/src/scripts/loadData.js",
+		"/C/Git/symfonyproject/lockyproj/src/AppBundle/Controller/LoginController.php",
+		"/C/Git/symfonyproject/lockyproj/src/AppBundle/Entity/LoginForm.php",
+		"/C/Git/symfonyproject/lockyproj/src/AppBundle/Resources/public/styles/login/main.less",
+		"/C/Git/symfonyproject/lockyproj/app/Resources/views/login/login.html.twig",
+		"/C/Git/symfonyproject/lockyproj/app/Resources/views/shop/index.html.twig",
+		"/C/Git/symfonyproject/lockyproj/src/AppBundle/Controller/ShopController.php",
+		"/C/Git/symfonyproject/lockyproj/src/AppBundle/Entity/SteamGame.php",
+		"/C/Git/symfonyproject/lockyproj/src/AppBundle/Resources/public/css/jquery-ui/jquery-ui.css",
+		"/C/Git/jsshop/phpdata/data.php",
+		"/C/Git/symfonyproject/lockyproj/vendor/symfony/symfony/src/Symfony/Component/Serializer/Encoder/JsonEncode.php",
+		"/C/Git/symfonyproject/lockyproj/vendor/symfony/symfony/src/Symfony/Component/Serializer/Encoder/JsonEncoder.php",
+		"/C/Git/jsshop/src/scripts/data.json",
+		"/C/Git/symfonyproject/lockyproj/vendor/autoload.php",
+		"/C/Git/jsshop/src/scripts/datatosql.php",
+		"/C/Git/jsshop/src/scripts/data.sql",
+		"/C/Git/jsshop/gulpfile.js",
+		"/C/Git/symfonyproject/lockyproj/app/config/parameters.yml",
+		"/C/Git/symfonyproject/lockyproj/composer.json",
+		"/C/Cygwin/etc/httpd/conf/httpd.conf",
+		"/C/Git/jsshop/src/less/main.less",
+		"/C/Git/symfonyproject/lockyproj/app/AppKernel.php",
+		"/C/Git/symfonyproject/lockyproj/vendor/symfony/symfony/src/Symfony/Component/Console/Application.php",
+		"/C/Git/symfonyproject/lockyproj/vendor/symfony/symfony/src/Symfony/Component/Console/Command/Command.php",
+		"/C/Git/symfonyproject/lockyproj/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Console/Application.php",
+		"/C/Cygwin%1",
+		"/C/etc/httpd/conf/httpd.conf",
+		"/C/Git/symfonyproject/lockyproj/app/config/parameters.yml.dist",
+		"/C/Git/symfonyproject/lockyproj/src/AppBundle/Controller/DefaultController.php",
+		"/C/Git/symfonyproject/lockyproj/app/autoload.php",
+		"/C/Users/xtpvx/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/xtpvx/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Git/jsshop/build/index.html",
+		"/C/Git/symfonyproject/lockyproj/app/Resources/public/css/jqgrid/ui.jqgrid.css",
+		"/C/Git/symfonyproject/lockyproj/README.md",
+		"/C/Users/xtpvx/AppData/Roaming/Sublime Text 3/Packages/Installed Packages/Package Control.sublime-package"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "locky.sublime-project",
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 281.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
