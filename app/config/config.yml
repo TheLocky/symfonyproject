@@ -99,6 +99,16 @@ assetic:
         shop_js:
             inputs:
                 - '@AppBundle/Resources/public/js/shop/*'
+        shop_less:
+            inputs:
+                - '@AppBundle/Resources/public/styles/shop/*'
         login_less:
             inputs:
                 -'@AppBundle/Resources/public/styles/login/*'
+
+# Knp Menu Config
+knp_menu:
+    twig:
+        template: knp_menu.html.twig
+    templating: false
+    default_renderer: twig

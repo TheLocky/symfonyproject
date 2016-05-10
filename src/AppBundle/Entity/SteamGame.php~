@@ -15,35 +15,35 @@ class SteamGame
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    protected $id;
+    private $id;
 
 	/**
      * @ORM\Column(type="string", length=100)
      */
-	protected $name;
+	private $name;
 
 	/**
      * @ORM\Column(type="string", length=256)
      */
-	protected $image;
+	private $image;
 
 	/**
      * @ORM\Column(type="date", length=100)
      */
-	protected $date;
+	private $date;
 
 	/**
      * @ORM\Column(type="string", length=100)
      */
-	protected $developer;
+	private $developer;
 
 	/**
      * @ORM\Column(type="string", length=256)
      */
-	protected $website;
+	private $website;
 
     /**
-     * @ORM\Column(type="decimal", name="price", nullable=false, scale=2, precision=10)
+     * @ORM\Column(type="decimal", name="price", nullable=false, scale=5, precision=10)
      */
     protected $price;
 
@@ -157,101 +157,5 @@ class SteamGame
     public function getCategories()
     {
         return $this->categories;
-    }
-
-    /**
-     * Set image
-     *
-     * @param string $image
-     *
-     * @return SteamGame
-     */
-    public function setImage($image)
-    {
-        $this->image = $image;
-
-        return $this;
-    }
-
-    /**
-     * Get image
-     *
-     * @return string
-     */
-    public function getImage()
-    {
-        return $this->image;
-    }
-
-    /**
-     * Set date
-     *
-     * @param \DateTime $date
-     *
-     * @return SteamGame
-     */
-    public function setDate($date)
-    {
-        $this->date = $date;
-
-        return $this;
-    }
-
-    /**
-     * Get date
-     *
-     * @return \DateTime
-     */
-    public function getDate()
-    {
-        return $this->date;
-    }
-
-    /**
-     * Set developer
-     *
-     * @param string $developer
-     *
-     * @return SteamGame
-     */
-    public function setDeveloper($developer)
-    {
-        $this->developer = $developer;
-
-        return $this;
-    }
-
-    /**
-     * Get developer
-     *
-     * @return string
-     */
-    public function getDeveloper()
-    {
-        return $this->developer;
-    }
-
-    /**
-     * Set price
-     *
-     * @param string $price
-     *
-     * @return SteamGame
-     */
-    public function setPrice($price)
-    {
-        $this->price = $price;
-
-        return $this;
-    }
-
-    /**
-     * Get price
-     *
-     * @return string
-     */
-    public function getPrice()
-    {
-        return $this->price;
     }
 }
