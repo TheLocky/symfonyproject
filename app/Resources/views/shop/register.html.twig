@@ -1,0 +1,16 @@
+{% extends 'shop/shopbase.html.twig' %}
+
+{% block shoppage %}
+	<div class="row">
+		<div class="panel panel-default pagepanel">
+			<div class="panel-body center-block" style="max-width: 600px">
+				{% form_theme regForm 'shop/form_template.html.twig' %}
+				{{ form_start(regForm) }}
+				{{ form_row(regForm.username) }}
+				{{ form_row(regForm.password) }}
+				{{ form_row(regForm.submit) }}
+				{{ form_end(regForm) }}
+			</div>
+		</div>
+	</div>
+{% endblock %}

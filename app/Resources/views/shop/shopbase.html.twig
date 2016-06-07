@@ -1,0 +1,100 @@
+{% extends 'base.html.twig' %}
+
+{% set currentRoute = app.request.attributes.get('_route') %}
+{% set currentParams = app.request.query.all %}
+
+{% block title %}
+	Steam Games Shop
+{% endblock %}
+
+{% block javascripts %}
+	{% javascripts output='js/sc.js'
+		'@jquery_js'
+		'@bootstrap_js'
+		'@shop_js' %}
+        <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+    {% block additionaljs %}{% endblock %}
+{% endblock %}
+
+{% block stylesheets %}
+	{% stylesheets output='css/st.css' filter='lessphp'
+		'@bootstrap_css'
+		'@shop_less' %}
+		<link rel="stylesheet" href="{{ asset_url }}" />
+	{% endstylesheets %}
+{% endblock %}
+
+{% block body %}
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/shop">Магазин игр Steam</a>
+            </div>
+            <div class="navbar-collapse pull-right">
+                <ul class="nav navbar-nav">
+                	{% if is_granted("ROLE_USER") %}
+                		{% if is_granted("ROLE_ADMIN") %}
+                			<li>
+                				<a href="/shop/admin">Управление магазином</a>
+                			</li>	
+                		{% endif %}                		
+                		<li>
+                			<p class="navbar-text">{{ app.user.username }}</p>
+                		</li>
+                		<li>
+                			<a href="/shop/logout" onclick="clearCart();">Выйти</a>
+                		</li>
+					{% else %}
+	                    <li>
+	                        <a href="/shop/login?_back={{ path(currentRoute, currentParams)|url_encode }}">Войти</a>
+	                    </li>
+	                    <li>
+	                        <a href="/shop/register?_back={{ path(currentRoute, currentParams)|url_encode }}">Регистрация</a>
+	                    </li>
+	                {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container center-block">
+		<div class="row">
+			<div class="col-md-3">
+				{% block catalog %}
+					<div class="row">
+						<p class="lead">Каталог</p>
+						<div class="categories">{{ knp_menu_render('shopmenu') }}</div>			
+					</div>
+				{% endblock %}				
+				{% block cart %}
+					<div class="row" style="margin-top: 20px">
+						<p class="lead">Корзина</p>
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<p id="itemsCount">Товаров: {{ cartInfo.count }}</p>
+								<p id="cost">На сумму: ${{ cartInfo.cost|number_format(2, '.', '') }}</p>
+								<div class="btn-group inline text-center">
+									<a href="/shop/cart" tabindex="-1" class="btn btn-default">В корзину</a>
+									<button class="btn btn-default" onclick="clearCart();">Очистить</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				{% endblock %}				
+			</div>
+			<div class="col-md-9">
+    			{% block shoppage %}{% endblock %}
+    		</div>		
+		</div>
+	</div>
+	<div class="container">
+        <hr>
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Locky 2016</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+{% endblock %}

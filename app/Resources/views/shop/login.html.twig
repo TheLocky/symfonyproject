@@ -1,0 +1,20 @@
+{% extends 'shop/shopbase.html.twig' %}
+
+{% block shoppage %}
+	<div class="row">
+		<div class="panel panel-default pagepanel">
+			<div class="panel-body center-block" style="max-width: 600px">
+				{% if error %}
+					<div class="alert alert-danger col-sm-12">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+				{% endif %}
+				{% form_theme loginForm 'shop/form_template.html.twig' %}
+				{{ form_start(loginForm) }}
+				{{ form_row(loginForm.username, {'full_name': '_username'}) }}
+				{{ form_row(loginForm.password, {'full_name': '_password'}) }}
+				{{ form_row(loginForm.submit) }}
+				<input type="hidden" name="_target_path" value="{{ app.request.get('_back','/shop') }}" />
+				{{ form_end(loginForm) }}
+			</div>
+		</div>
+	</div>
+{% endblock %}

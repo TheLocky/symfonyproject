@@ -1,0 +1,35 @@
+{% extends 'shop/shopbase.html.twig' %}
+
+{% block catalog %}
+	<div class="row">
+		<p class="lead">Управление магазином</p>	
+	</div>
+{% endblock %}
+{% block cart %}{% endblock %}
+{% block shoppage %}
+	<div class="panel panel-default pagepanel">
+		<div class="panel-body">
+			<p class="lead">Таблицы</p>
+			<ul class="nav nav-tabs">
+				<li class="active"><a data-toggle="tab" href="#users">Пользователи</a></li>
+				<li><a data-toggle="tab" href="#cats">Категории</a></li>
+				<li><a data-toggle="tab" href="#games">Игры</a></li>
+				<li><a data-toggle="tab" href="#orders">Заказы</a></li>
+			</ul>
+			<div class="tab-content">
+			  	<div id="users" class="tab-pane fade in active">
+			    	{{ grid(usersTable, 'templates/apygrid_bootstrap.html.twig') }}
+			  	</div>
+			  	<div id="cats" class="tab-pane fade">
+			    	{{ grid(categoryTable, 'templates/apygrid_bootstrap.html.twig') }}
+			  	</div>
+			  	<div id="games" class="tab-pane fade">
+			    	{{ grid(gamesTable, 'templates/apygrid_bootstrap.html.twig') }}
+			  	</div>
+			  	<div id="orders" class="tab-pane fade">
+			    	{{ grid(ordersTable, 'templates/apygrid_bootstrap.html.twig') }}
+			  	</div>
+			</div>
+		</div>		
+	</div>
+{% endblock %}

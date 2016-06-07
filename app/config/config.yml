@@ -6,11 +6,11 @@ imports:
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
-    locale: en
+    locale: ru
 
 framework:
     #esi:             ~
-    #translator:      { fallbacks: ["%locale%"] }
+    translator:      { fallbacks: ["%locale%"] }
     secret:          "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -84,18 +84,13 @@ assetic:
     assets:
         jquery_js:
             inputs:
-                - '@AppBundle/Resources/public/js/jquery/jquery.min.js'
-                - '@AppBundle/Resources/public/js/jquery/jquery-ui.min.js'
-        jquery_css:
+                - '@AppBundle/Resources/public/js/jquery/*'
+        bootstrap_js:
             inputs:
-                - '@AppBundle/Resources/public/css/jquery-ui/jquery-ui.css'
-        jqgrid_js:
+                - '@AppBundle/Resources/public/js/bootstrap/*'
+        bootstrap_css:
             inputs:
-                - '@AppBundle/Resources/public/js/jqgrid/jquery.jqGrid.min.js'
-                - '@AppBundle/Resources/public/js/jqgrid/grid.locale-ru.js'        
-        jqgrid_css:
-            inputs:
-                - '@AppBundle/Resources/public/css/jqgrid/ui.jqgrid.css'
+                - '@AppBundle/Resources/public/styles/bootstrap/*'
         shop_js:
             inputs:
                 - '@AppBundle/Resources/public/js/shop/*'

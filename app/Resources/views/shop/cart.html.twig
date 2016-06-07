@@ -1,0 +1,66 @@
+{% extends 'shop/shopbase.html.twig' %}
+
+{% block cart %}{% endblock %} {# clear cart block #}
+{% block shoppage %}
+	<div class="row">
+		<div class="panel panel-default pagepanel">
+	        <div id='#cart-body' class="panel-body">
+	        	{% if cartItems|length > 0 %}
+	        		<div id="buyerror" class="alert alert-danger col-sm-12" hidden="true"></div>
+	        		<p class="lead">Корзина</p>
+		            <form>
+		            	{% set fullCost = 0 %}
+		            	{% for item in cartItems %}
+		            		<ul class="list-group">
+			                    <li id="item-{{ item.id }}" class="list-group-item">
+			                        <div class="row">
+			                            <div class="col-md-6">
+			                            	<h4>{{ item.name }}</h4>
+			                            </div>
+			                            <div class="col-md-2 cart-row-center">
+			                                <input id="item-{{ item.id }}-count" class="form-control" 
+			                                	type="number" min="1" 
+			                                	value="{{item.count}}" step="1" onchange="itemCountChange({{ loop.index - 1 }});">
+			                            </div>
+			                            <div class="col-md-3">
+			                            	<h4 id="item-{{ item.id }}-cost">
+			                            		{% set fullCost = fullCost + item.cost * item.count %}
+			                            		Сумма: ${{ (item.cost*item.count)|number_format(2, '.', '') }}
+			                            	</h4>
+			                            </div>
+			                            <div class="col-md-1 cart-row-center">
+			                                <button class="btn btn-default" type="button" onclick="itemRemove({{ loop.index - 1 }});">
+		                                    	<span class="glyphicon glyphicon-remove"></span>
+		                                    </button>
+			                            </div>
+			                        </div>
+			                    </li>
+			                </ul>
+		            	{% endfor %}
+		            	<ul class="list-group">
+		                    <li class="list-group-item">
+		                        <div class="row">
+		                            <div class="col-md-8"></div>
+		                            <div class="col-md-3">
+		                            	<h4 id="full-cost">
+		                            		Итого: ${{ fullCost|number_format(2, '.', '') }}
+		                            	</h4>
+		                            </div>
+		                            <div class="col-md-1"></div>
+		                        </div>
+		                    </li>
+		                </ul>		                
+		            </form>
+		            {% if is_granted("ROLE_USER") %}
+		            	<button class="btn btn-default pull-right" onclick="doBuy();">Купить</button>
+		            {% else %}
+			            <a href="/shop/register?_back={{ path(currentRoute, currentParams)|url_encode }}" 
+			            	class="btn btn-default pull-right">Регистрация</a>
+		            {% endif %}	
+		        {% else %}
+		        	<p class="lead">Корзина пуста</p>
+	        	{% endif %}
+	        </div>
+	    </div>
+	</div>
+{% endblock %}

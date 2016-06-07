@@ -1,0 +1,58 @@
+{% extends 'shop/shopbase.html.twig' %}
+
+{% block shoppage %}
+	<div class="row">
+		<div class="panel panel-default pagepanel">
+			<div class="panel-body">
+				<ul class="breadcrumb" style="margin-bottom: 0px; background-color: transparent">
+					{% for cat in path %}
+						<li {% if loop.last %}class="active"{% endif %}>
+							{% if not loop.last %}<a href="?category={{ cat.path }}">{% endif %}
+								{{ cat.name }}
+							{% if not loop.last %}</a>{% endif %}
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		{% for game in games %}
+			<div class="col-sm-4 col-lg-4 col-md-4">
+				<div class="thumbnail">
+					<img src="{{ game.image }}" alt="">
+					<div class="caption">
+						<h4 class="pull-right">${{ game.price }}</h4>
+						<h4 class="item-name">{{ game.name }}</h4>
+						<p>{{ game.developer }}</p>
+						<button class="btn btn-default" onclick="addItemToCart({{game.id}},{{game.price}});">
+							Купить
+						</button>
+					</div>
+				</div>
+			</div>    
+		{% endfor %}
+	</div>
+	<div class="row">
+		<div class="panel panel-default pagepanel">
+			<div class="panel-body">
+				<div class="_paginator"></div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+{% block additionaljs %}
+	<script type="text/javascript">
+		$("._paginator").twbsPagination({
+			totalPages: {{ page.total }},
+			visiblePages: {{ page.visible }},
+			startPage: {{ page.current }},
+			href: "?{% if not path|last.path is same as('.') %}category={{path|last.path}}&{% endif %}page=-page-",
+			hrefVariable: '-page-',
+			first: 'Первая',
+			last: 'Последняя',
+			next: 'Следующая',
+			prev: 'Предыдущая'
+		});
+	</script>
+{% endblock %}

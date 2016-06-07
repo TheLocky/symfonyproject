@@ -31,9 +31,10 @@
         "symfony/serializer": "^3.0",
         "leafo/scssphp": "^0.6.3",
         "leafo/lessphp": "^0.5.0",
-        "apy/datagrid-bundle": "^2.2",
         "knplabs/knp-menu-bundle": "^2.0",
-        "knplabs/knp-paginator-bundle": "^2.5"
+        "knplabs/knp-paginator-bundle": "^2.5",
+        "sg/datatablesbundle": "^0.10.0",
+        "artscorestudio/datagrid-bundle": "^3.0"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",
